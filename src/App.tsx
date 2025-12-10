@@ -17,9 +17,16 @@ import AdminLeads from "./pages/admin/AdminLeads";
 
 // Client Pages
 import ClientDashboard from "./pages/client/ClientDashboard";
+import ClientLeads from "./pages/client/ClientLeads";
 import ClientChatLogs from "./pages/client/ClientChatLogs";
 import ClientKnowledgeBase from "./pages/client/ClientKnowledgeBase";
 import ClientProducts from "./pages/client/ClientProducts";
+import ClientBotPersonality from "./pages/client/ClientBotPersonality";
+import ClientWorkflows from "./pages/client/ClientWorkflows";
+import ClientBilling from "./pages/client/ClientBilling";
+import ClientTeam from "./pages/client/ClientTeam";
+import ClientIntegrations from "./pages/client/ClientIntegrations";
+import ClientSettings from "./pages/client/ClientSettings";
 
 const queryClient = new QueryClient();
 
@@ -44,9 +51,16 @@ const App = () => (
           {/* Client Routes */}
           <Route element={<DashboardLayout type="client" />}>
             <Route path="/dashboard" element={<ClientDashboard />} />
+            <Route path="/dashboard/leads" element={<ClientLeads />} />
             <Route path="/dashboard/chats" element={<ClientChatLogs />} />
             <Route path="/dashboard/knowledge" element={<ClientKnowledgeBase />} />
             <Route path="/dashboard/products" element={<ClientProducts />} />
+            <Route path="/dashboard/personality" element={<ClientBotPersonality />} />
+            <Route path="/dashboard/workflows" element={<ClientWorkflows />} />
+            <Route path="/dashboard/billing" element={<ClientBilling />} />
+            <Route path="/dashboard/team" element={<ClientTeam />} />
+            <Route path="/dashboard/integrations" element={<ClientIntegrations />} />
+            <Route path="/dashboard/settings" element={<ClientSettings />} />
           </Route>
 
           {/* Catch-all */}
